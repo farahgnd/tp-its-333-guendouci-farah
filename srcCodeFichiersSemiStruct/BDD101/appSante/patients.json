@@ -1,0 +1,64 @@
+[
+  {
+    "id": "12345",
+    "nom": "Dupont",
+    "prenom": "Jean",
+    "date_naissance": "1980-05-15",
+    "sexe": "M",
+    "adresse": {
+      "rue": "12 rue de la Paix",
+      "ville": "Paris",
+      "code_postal": "75002",
+      "pays": "France"
+    },
+    "contact": {
+      "telephone": "+33 1 23 45 67 89",
+      "email": "jean.dupont@example.com"
+    },
+    "rapports_medicals": [
+      {
+        "date": "2023-01-10",
+        "medecin": "Dr. Martin",
+        "diagnostic": "Grippe",
+        "traitement": "Repos et hydratation"
+      },
+      {
+        "date": "2022-11-22",
+        "medecin": "Dr. Leroy",
+        "diagnostic": "Fracture du poignet",
+        "traitement": "Plâtre pendant 6 semaines"
+      }
+    ]
+  },
+  {
+    "id": "123456",
+    "nom": "Guendouci",
+    "prenom": "Farah",
+    "date_naissance": "2003-10-15",
+    "sexe": "F",
+    "adresse": {
+      "rue": "13 rue de la Paix",
+      "ville": "Creteil",
+      "code_postal": "94002",
+      "pays": "France"
+    },
+    "contact": {
+      "telephone": "+33 1 23 45 67 90",
+      "email": "farah.guendouci@gmail.com"
+    },
+    "rapports_medicals": [
+      {
+        "date": "2025-01-10",
+        "medecin": "Dr. du Bois",
+        "diagnostic": "Covid-19",
+        "traitement": "Corticoïde"
+      },
+      {
+        "date": "2022-11-22",
+        "medecin": "Dr. Enzo",
+        "diagnostic": "Fracture du genou",
+        "traitement": "Plâtre pendant 8 semaines"
+      }
+    ]
+  }
+]
