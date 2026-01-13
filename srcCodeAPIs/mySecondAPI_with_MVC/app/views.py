@@ -2,24 +2,36 @@ from app import app
 from flask import render_template, request, jsonify
 
 ### EXO1 - simple API
+@app.route('/api/salutation', methods=['GET'])
+def salutation():
+    return jsonify({"message": "Hello World"})
 
 
 
-### EXO2 - API with simple display
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+#  EXO2 - API with simple display
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+### EXO3 - API with parameters display 
+@app.route('/', methods=['GET'])
+def affiche():
+    nom = request.args.get("nom", "farah")   
+    age = request.args.get("age", "22")  
+    # renvoie le rendu HTML
+    return render_template("index.html", nom=nom, age=age)
 
+if __name__ == '__main__':
+    app.run(debug=True)
 
 ### EXO4 - API with parameters retrieved from URL 
 
-@app.route('/', methods=['GET'])
-def salutation_url():
-    nom = request.args.get("nom")  # récupère le paramètre "nom" dans l'URL
-    if not nom:
-        return jsonify({"error": "Aucun nom fourni"}), 400
-    return jsonify({"message": f"Bonjour {nom}"})
+@app.route('/params')
+def params():
+    nom = request.args.get("nom")
+    age = request.args.get("age")
+
+    return render_template("index.html", nom=nom, age=age)
 
 if __name__ == '__main__':
     app.run(debug=True)
